@@ -4,11 +4,11 @@ RSpec.describe LockEmAll::LockObject do # rubocop:disable Metrics/BlockLength
   let!(:mock_adapter) { instance_double(LockEmAll::LockObject) }
   let(:lock_object_one) do
     FactoryBot.build(:lock_object,
-                     object_params: { object_name: "Test", object_key: "Library-programming" }, user_id: 1)
+                     object_params: { object_name: "Test", object_key: "Library-programming" }, object_value: 1)
   end
   let(:lock_object_two) do
     FactoryBot.build(:lock_object,
-                     object_params: { object_name: "Test", object_key: "YouTube-dev-channel" }, user_id: 2)
+                     object_params: { object_name: "Test", object_key: "YouTube-dev-channel" }, object_value: 2)
   end
 
   before do
